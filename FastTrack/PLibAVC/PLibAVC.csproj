@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Title>PLib Automatic Version Check</Title>
+    <AssemblyTitle>PLib.AVC</AssemblyTitle>
+    <Version>$(PLibVersion)</Version>
+    <UsesPLib>false</UsesPLib>
+    <RootNamespace>PeterHan.PLib.AVC</RootNamespace>
+    <AssemblyVersion>$(PLibVersion)</AssemblyVersion>
+    <DistributeMod>false</DistributeMod>
+    <PLibCore>true</PLibCore>
+    <Platforms>Vanilla;Mergedown</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\$(Platform)\Release\PLibAVC.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../PLibCore/PLibCore.csproj" />
+    <ProjectReference Include="../PLibUI/PLibUI.csproj" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" HintPath="$(GameFolderActive)/UnityEngine.UnityWebRequestModule.dll" />
+  </ItemGroup>
+</Project>

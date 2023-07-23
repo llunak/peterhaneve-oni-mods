@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Title>PLib Core</Title>
+    <AssemblyTitle>PLib.Core</AssemblyTitle>
+    <Version>$(PLibVersion)</Version>
+    <UsesPLib>false</UsesPLib>
+    <RootNamespace>PeterHan.PLib.Core</RootNamespace>
+    <AssemblyVersion>$(PLibVersion)</AssemblyVersion>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>  
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <DistributeMod>false</DistributeMod>
+    <PLibCore>true</PLibCore>
+    <Platforms>Vanilla;Mergedown</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\$(Platform)\Release\PLibCore.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Utils\**" />
+    <EmbeddedResource Remove="Utils\**" />
+    <None Remove="Utils\**" />
+  </ItemGroup>
+</Project>

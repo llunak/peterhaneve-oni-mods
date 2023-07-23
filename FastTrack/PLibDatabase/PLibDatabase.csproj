@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Title>PLib Database</Title>
+    <AssemblyTitle>PLib.Database</AssemblyTitle>
+    <Version>$(PLibVersion)</Version>
+    <UsesPLib>false</UsesPLib>
+    <RootNamespace>PeterHan.PLib.Database</RootNamespace>
+    <AssemblyVersion>$(PLibVersion)</AssemblyVersion>
+    <DistributeMod>false</DistributeMod>
+    <PLibCore>true</PLibCore>
+    <Platforms>Vanilla;Mergedown</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\$(Platform)\Release\PLibDatabase.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../PLibCore/PLibCore.csproj" />
+  </ItemGroup>
+</Project>
