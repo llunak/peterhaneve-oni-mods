@@ -415,7 +415,7 @@ namespace PeterHan.PLib.UI {
 				return sortKey;
 			}
 
-			protected override void OnDeactivate() {
+			public override void OnDeactivate() {
 				if (dialog != null)
 					// Klei destroys the dialog GameObject for us
 					dialog.DialogClosed?.Invoke(key);

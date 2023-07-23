@@ -73,14 +73,14 @@ namespace PeterHan.PLib.UI {
 			return editing ? 99.0f : base.GetSortKey();
 		}
 
-		protected override void OnCleanUp() {
+		public override void OnCleanUp() {
 			textEntry.onFocus -= OnFocus;
 			textEntry.onValueChanged.RemoveListener(OnValueChanged);
 			textEntry.onEndEdit.RemoveListener(OnEndEdit);
 			base.OnCleanUp();
 		}
 
-		protected override void OnSpawn() {
+		public override void OnSpawn() {
 			base.OnSpawn();
 			textEntry.onFocus += OnFocus;
 			textEntry.onValueChanged.AddListener(OnValueChanged);

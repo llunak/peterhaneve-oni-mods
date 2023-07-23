@@ -100,9 +100,9 @@ namespace PeterHan.PLib.UI {
 			// Set on click event
 			var kButton = button.AddComponent<KButton>();
 			var evt = OnClick;
-			if (evt != null)
+//			if (evt != null)
 				// Detouring an Event is not worth the effort
-				kButton.onClick += () => evt?.Invoke(button);
+//				kButton.onClick += () => evt?.Invoke(button);
 			SetupButton(kButton, bgImage);
 			// Add foreground image since the background already has one
 			if (Sprite != null) {

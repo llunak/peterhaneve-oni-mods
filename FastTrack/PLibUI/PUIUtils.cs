@@ -617,7 +617,7 @@ namespace PeterHan.PLib.UI {
 					sprite = Sprite.Create(texture, new Rect(0, 0, width, height), new Vector2(
 						0.5f, 0.5f), 100.0f, 0, SpriteMeshType.FullRect, border);
 				}
-			} catch (IOException e) {
+			} catch (IOException) {
 #if DEBUG
 				PUtil.LogExcWarn(e);
 #endif

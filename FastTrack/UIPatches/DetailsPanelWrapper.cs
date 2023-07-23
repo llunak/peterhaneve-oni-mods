@@ -454,7 +454,7 @@ namespace PeterHan.FastTrack.UIPatches {
 						inst.lastSelection = new LastSelectionDetails(go, cso, __instance);
 					if (!__instance.HasActivated) {
 						InstantiateScreens(__instance, screens);
-						__instance.onTabActivated += __instance.OnTabActivated;
+//						__instance.onTabActivated += __instance.OnTabActivated;
 						__instance.HasActivated = true;
 					}
 					int tabCount = EnableScreens(__instance, go, screens);

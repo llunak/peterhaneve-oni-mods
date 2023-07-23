@@ -129,9 +129,9 @@ namespace PeterHan.PLib.UI {
 			var kToggle = toggle.AddComponent<KToggle>();
 			var evt = OnStateChanged;
 			if (evt != null)
-				kToggle.onValueChanged += (on) => {
-					evt?.Invoke(toggle, on);
-				};
+//				kToggle.onValueChanged += (on) => {
+//					evt?.Invoke(toggle, on);
+//				};
 			UIDetours.ART_EXTENSION.Set(kToggle, new KToggleArtExtensions());
 			UIDetours.SOUND_PLAYER_TOGGLE.Set(kToggle, PUITuning.ToggleSounds);
 			// Background image

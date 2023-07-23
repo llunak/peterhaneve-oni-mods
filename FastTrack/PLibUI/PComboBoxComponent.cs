@@ -104,7 +104,7 @@ namespace PeterHan.PLib.UI {
 				Open();
 		}
 
-		protected override void OnPrefabInit() {
+		public override void OnPrefabInit() {
 			base.OnPrefabInit();
 			handler = gameObject.AddOrGet<MouseEventHandler>();
 		}
@@ -165,10 +165,10 @@ namespace PeterHan.PLib.UI {
 					// Apply the listener for the button
 					var button = rowInstance.GetComponentInChildren<KButton>();
 					button.ClearOnClick();
-					button.onClick += () => {
-						SetSelectedItem(item, true);
-						Close();
-					};
+//					button.onClick += () => {
+//						SetSelectedItem(item, true);
+//						Close();
+//					};
 					// Assign the tooltip if possible
 					if (item is ITooltipListableOption extended)
 						tooltip = extended.GetToolTipText();

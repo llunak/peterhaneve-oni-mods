@@ -74,7 +74,7 @@ namespace PeterHan.PLib.Core {
 				try {
 					plibInstance.PatchTranspile(ugc, "LoadPreviewImage", PatchMethod(nameof(
 						LoadPreviewImage_Transpile)));
-				} catch (Exception e) {
+				} catch (Exception) {
 #if DEBUG
 					PUtil.LogExcWarn(e);
 #endif

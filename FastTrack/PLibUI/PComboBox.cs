@@ -208,7 +208,7 @@ namespace PeterHan.PLib.UI {
 			var dropButton = combo.AddComponent<KButton>();
 			PButton.SetupButton(dropButton, bgImage);
 			UIDetours.FG_IMAGE.Set(dropButton, icon);
-			dropButton.onClick += comboBox.OnClick;
+//			dropButton.onClick += comboBox.OnClick;
 			// Add tooltip
 			PUIElements.SetToolTip(selection, ToolTip);
 			combo.SetActive(true);

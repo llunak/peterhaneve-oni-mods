@@ -92,7 +92,7 @@ namespace PeterHan.FastTrack.UIPatches {
 			label.TryGetComponent(out selectButton);
 			label.TryGetComponent(out thaw);
 			Length = 0;
-			selectButton.onClick += Select;
+//			selectButton.onClick += Select;
 			tooltip = label.GetComponentInChildren<ToolTip>();
 			text = label.GetComponentInChildren<LocText>();
 			if (id == EMPTY_ITEM)
@@ -103,7 +103,7 @@ namespace PeterHan.FastTrack.UIPatches {
 				var remove = child.FindComponent<KButton>();
 				remove.enabled = false;
 				remove.gameObject.SetActive(false);
-				remove.onClick += Drop;
+//				remove.onClick += Drop;
 				removeButton = remove;
 			} else
 				removeButton = null;

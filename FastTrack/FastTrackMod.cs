@@ -220,6 +220,7 @@ namespace PeterHan.FastTrack {
 				// This patch is Windows only apparently
 				var target = typeof(Global).GetMethodSafe(nameof(Global.TestDataLocations),
 					false);
+#if false
 				if (target != null && typeof(Global).GetFieldSafe(
 						nameof(Global.saveFolderTestResult), true) != null) {
 					harmony.Patch(target, prefix: new HarmonyMethod(typeof(FastTrackMod),
@@ -229,6 +230,7 @@ namespace PeterHan.FastTrack {
 #endif
 				} else
 					PUtil.LogDebug("Skipping TestDataLocations patch");
+#endif
 				// Another potentially Windows only patch
 				target = typeof(Game).Assembly.GetType(nameof(InitializeCheck), false)?.
 					GetMethodSafe(nameof(InitializeCheck.CheckForSavePathIssue), false);

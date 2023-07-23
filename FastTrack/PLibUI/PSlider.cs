@@ -189,8 +189,8 @@ namespace PeterHan.PLib.UI {
 			ks.SetDirection(Direction, true);
 			if (OnValueChanged != null)
 				ks.onValueChanged.AddListener((value) => OnValueChanged(slider, value));
-			if (OnDrag != null)
-				ks.onDrag += () => OnDrag(slider, ks.value);
+//			if (OnDrag != null)
+//				ks.onDrag += () => OnDrag(slider, ks.value);
 			// Manually add tooltip with slider link
 			string tt = ToolTip;
 			if (!string.IsNullOrEmpty(tt)) {
